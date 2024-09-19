@@ -1086,21 +1086,22 @@ body.ie .ibg img {
       .icon__insta svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__insta svg {
+    .icon__insta svg path {
+      fill: #000;
       width: 30px; } }
 
-.icon__telegram {
+.icon__facebook {
   color: #0B0B0B;
   margin: 38px 0px; }
-  .icon__telegram:hover .c {
+  .icon__facebook:hover .c {
     fill: #FCD600; }
   @media (max-width: 1000px) {
-    .icon__telegram:hover {
+    .icon__facebook:hover {
       margin: 30px 0px; }
-      .icon__telegram:hover svg {
+      .icon__facebook:hover svg {
         width: 35px; } }
   @media (max-width: 768px) {
-    .icon__telegram:hover {
+    .icon__facebook:hover {
       margin: 30px 0px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1108,16 +1109,14 @@ body.ie .ibg img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      .icon__telegram:hover .c {
+      .icon__facebook:hover .c {
         fill: #0B0B0B; }
-      .icon__telegram:hover svg {
+      .icon__facebook:hover svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__telegram:hover svg {
+    .icon__facebook svg path {
+      fill: #000;
       width: 30px; } }
-  @media (max-width: 375px) {
-    .icon__telegram:hover {
-      margin: 20px 0px; } }
 
 .icon__twitter {
   color: #0B0B0B; }
