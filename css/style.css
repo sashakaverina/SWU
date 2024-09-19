@@ -1139,7 +1139,8 @@ body.ie .ibg img {
       .icon__twitter svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__twitter svg {
+    .icon__twitter svg path {
+      fill: #000;
       width: 30px; } }
 
 .doanate {
@@ -1395,6 +1396,13 @@ body.ie .ibg img {
       .objective__text {
         padding: 0px 0px 0px 0px;
         margin: 0px 0px 30px 0px; } }
+  .objective__link {
+    font-weight: 600;
+    text-align: right;
+    font-size: 14px;}
+    @media (max-width: 1112px) {
+      .objective__link {
+        font-size: 13px; } }
   .objective .column-img {
     max-width: 500px; }
     @media (max-width: 1112px) {
@@ -1586,6 +1594,31 @@ body.ie .ibg img {
         margin: 0px 0px 25px 0px;
         font-size: 25px;
         line-height: 35px; } }
+  .footer__link {
+    margin: 40px 0px 0px 0px;
+    font-size: 14px;
+    font-family: 'Khula';
+    font-weight: 800;
+    color: #F7F7F7;
+    letter-spacing: 1px;
+    text-align: right;
+    line-height: 55px; }
+    .footer__link a:link,
+    .footer__link a:visited,
+    .footer__link a:hover,
+    .footer__link a:active {
+      color: #F7F7F7;
+    }
+    @media (max-width: 991.98px) {
+      .footer__link {
+        margin: 25px 0px 0px 0px;
+        font-size: 13px;
+        line-height: 45px; } }
+    @media (max-width: 479.98px) {
+      .footer__link {
+        margin: 25px 0px 0px 0px;
+        font-size: 12px;
+        line-height: 35px; } }  
   @media (max-width: 991.98px) {
     .footer__logo img {
       width: 120px; } }
