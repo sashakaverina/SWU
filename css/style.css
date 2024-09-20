@@ -1068,7 +1068,7 @@ body.ie .ibg img {
 
 .icon__insta {
   color: #0B0B0B; }
-  .icon__insta:hover .c {
+  .icon__insta:hover .ci {
     fill: #FCD600; }
   @media (max-width: 1000px) {
     .icon__insta svg {
@@ -1081,19 +1081,18 @@ body.ie .ibg img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      .icon__insta .c {
+      .icon__insta .ci {
         fill: #0B0B0B; }
       .icon__insta svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__insta svg path {
-      fill: #000;
+    .icon__insta svg {
       width: 30px; } }
 
 .icon__facebook {
   color: #0B0B0B;
   margin: 38px 0px; }
-  .icon__facebook:hover .c {
+  .icon__facebook:hover .cf {
     fill: #FCD600; }
   @media (max-width: 1000px) {
     .icon__facebook:hover {
@@ -1109,18 +1108,20 @@ body.ie .ibg img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      .icon__facebook:hover .c {
+      .icon__facebook:hover .cf {
         fill: #0B0B0B; }
       .icon__facebook:hover svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__facebook svg path {
-      fill: #000;
+    .icon__facebook:hover svg {
       width: 30px; } }
+  @media (max-width: 375px) {
+    .icon__facebook:hover {
+      margin: 20px 0px; } }
 
 .icon__twitter {
   color: #0B0B0B; }
-  .icon__twitter:hover .a {
+  .icon__twitter:hover .at {
     fill: #FCD600; }
   @media (max-width: 1000px) {
     .icon__twitter svg {
@@ -1133,13 +1134,12 @@ body.ie .ibg img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      .icon__twitter .a {
+      .icon__twitter .at {
         fill: #0B0B0B; }
       .icon__twitter svg {
         margin: 0px 10px 0px 0px; } }
   @media (max-width: 375px) {
-    .icon__twitter svg path {
-      fill: #000;
+    .icon__twitter svg {
       width: 30px; } }
 
 .doanate {
