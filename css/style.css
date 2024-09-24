@@ -1526,6 +1526,10 @@ body.ie .ibg img {
   text-align: left;
   line-height: 30px;
   letter-spacing: 0.5px; }
+  .card__text span {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 21px; }
   @media (max-width: 767.98px) {
     .card__text {
       line-height: 27px;
