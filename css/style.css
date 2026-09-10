@@ -1604,26 +1604,38 @@ body.ie .ibg img {
     font-size: 14px;
     font-family: 'Khula', 'M PLUS 1p', sans-serif;
     font-weight: 800;
-    color: #F7F7F7;
+    color: #6B6B6B;
     letter-spacing: 1px;
-    text-align: right;
-    line-height: 55px; }
+    line-height: 2.2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center; }
     .footer__link a:link,
     .footer__link a:visited,
     .footer__link a:hover,
     .footer__link a:active {
-      color: #F7F7F7;
+      color: #6B6B6B;
     }
+    /* The four links used to sit one per line, because every <a> in the
+       markup was followed by a <br>. The <br> tags are gone and the row
+       is laid out with flex, so they read as one horizontal line and
+       wrap back into rows on a narrow screen. A separator is drawn
+       between them instead of a line break. */
+    .footer__link a:not(:last-child)::after {
+      content: '\00b7';
+      margin: 0px 12px;
+      color: #4A4A4A; }
     @media (max-width: 991.98px) {
       .footer__link {
         margin: 25px 0px 0px 0px;
         font-size: 13px;
-        line-height: 45px; } }
+        line-height: 2.1; } }
     @media (max-width: 479.98px) {
       .footer__link {
         margin: 25px 0px 0px 0px;
         font-size: 12px;
-        line-height: 35px; } }  
+        line-height: 2.0; } }  
   @media (max-width: 991.98px) {
     .footer__logo img {
       width: 120px; } }
