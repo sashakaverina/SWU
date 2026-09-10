@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Khula:wght@600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&display=swap");
 .jp_lang {
   font-family: 'Noto Serif JP', serif;
   font-weight: 400 !important; }
@@ -45,7 +45,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Noto Serif JP", serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -53,7 +53,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Playfair Display"; }
+  font-family: "Playfair Display", "Noto Serif JP", serif; }
 
 input::-ms-clear {
   display: none; }
@@ -869,7 +869,7 @@ body.ie .ibg img {
   .left-column__title {
     line-height: 33px;
     margin: 28px 0px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
     font-weight: 700;
     font-size: 30px;
     color: #F7F7F7;
@@ -893,13 +893,13 @@ body.ie .ibg img {
         font-size: 25px;
         padding: 0px 0px 8px 0px; } }
   .left-column__text {
-    text-align: justify;
+    text-align: left;
     font-size: 17px;
     color: #F7F7F7;
     line-height: 30px;
     letter-spacing: 0.5px; }
     .left-column__text span {
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
       font-weight: 600;
       font-size: 21px; }
     @media (max-width: 1300px) {
@@ -1172,7 +1172,7 @@ body.ie .ibg img {
     left: 16px; } }
 
 .lang__link {
-  font-family: 'Khula';
+  font-family: 'Khula', 'M PLUS 1p', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   display: inline-block;
@@ -1243,7 +1243,7 @@ body.ie .ibg img {
   display: inline-block;
   font-size: 25px;
   color: #FCD600;
-  font-family: 'Khula';
+  font-family: 'Khula', 'M PLUS 1p', sans-serif;
   letter-spacing: 1px; }
   @media (max-width: 1300px) {
     .btn {
@@ -1330,7 +1330,7 @@ body.ie .ibg img {
   .objective__title {
     text-align: right;
     font-size: 40px;
-    font-family: 'montserrat';
+    font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
     font-weight: 900;
     position: relative;
     padding: 0px 0px 20px 0px;
@@ -1466,7 +1466,7 @@ body.ie .ibg img {
 .title-do__title {
   text-align: right;
   font-size: 40px;
-  font-family: 'montserrat';
+  font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
   font-weight: 900;
   position: relative;
   padding: 0px 0px 20px 0px;
@@ -1497,7 +1497,7 @@ body.ie .ibg img {
 
 .title-do__subtitle {
   font-size: 20px;
-  font-family: 'montserrat';
+  font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
   font-weight: 500;
   line-height: 30px; }
   @media (max-width: 991.98px) {
@@ -1527,7 +1527,7 @@ body.ie .ibg img {
   line-height: 30px;
   letter-spacing: 0.5px; }
   .card__text span {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
     font-weight: 600;
     font-size: 21px; }
   @media (max-width: 767.98px) {
@@ -1539,7 +1539,7 @@ body.ie .ibg img {
 .slogan {
   position: relative; }
   .slogan__text {
-    font-family: 'Khula';
+    font-family: 'Khula', 'M PLUS 1p', sans-serif;
     font-weight: 600;
     color: #F7F7F7;
     position: relative;
@@ -1582,7 +1582,7 @@ body.ie .ibg img {
   .footer__text {
     margin: 0px 0px 40px 0px;
     font-size: 40px;
-    font-family: 'Khula';
+    font-family: 'Khula', 'M PLUS 1p', sans-serif;
     font-weight: 800;
     color: #005BC5;
     letter-spacing: 1px;
@@ -1602,7 +1602,7 @@ body.ie .ibg img {
   .footer__link {
     margin: 40px 0px 0px 0px;
     font-size: 14px;
-    font-family: 'Khula';
+    font-family: 'Khula', 'M PLUS 1p', sans-serif;
     font-weight: 800;
     color: #F7F7F7;
     letter-spacing: 1px;
@@ -1627,3 +1627,19 @@ body.ie .ibg img {
   @media (max-width: 991.98px) {
     .footer__logo img {
       width: 120px; } }
+
+/* the hero is sized to fill exactly one screen. On shorter viewports trim its
+   vertical padding so the text never spills below the fold. Scoped to desktop
+   widths so it does not fight the <=768px mobile padding rules above. */
+@media (min-width: 769px) and (max-height: 880px) {
+  .mainblock {
+    padding: 20px 0px; }
+  .left-column {
+    padding: 2.5% 0px; } }
+
+/* bulleted lines in the "Volunteer Activity" subtitle: indent the
+   wrapped lines under the text instead of under the dot. */
+.title-do__subtitle .bullet {
+  display: block;
+  padding-left: 1.1em;
+  text-indent: -1.1em; }

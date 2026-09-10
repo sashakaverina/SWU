@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 	<head>
-		<title>swu</title>
+		<title>Commercial Disclosure | SWU Japan</title>
 		<meta charset="UTF-8">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" href="css/style.css">
@@ -9,6 +9,89 @@
 		<!-- <meta name="robots" content="noindex, nofollow"> -->
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<style>
+			/* this page only: let the header block size to its content so the
+			   disclosure is visible without scrolling past a full-screen hero */
+			.page {
+				position: relative;
+				height: auto;
+				min-height: 100%; }
+			.mainblock {
+				flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				-webkit-box-flex: 0; }
+			.disclosure {
+				background-color: #F7F7F7;
+				padding: 100px 0px; }
+				@media (max-width: 991.98px) {
+					.disclosure { padding: 60px 0px; } }
+			.disclosure__title {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 900;
+				font-size: 40px;
+				line-height: 1.3;
+				color: #0B0B0B;
+				position: relative;
+				padding: 0px 0px 20px 0px;
+				margin: 0px 0px 50px 0px; }
+				.disclosure__title:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #FCD600; }
+				@media (max-width: 991.98px) {
+					.disclosure__title {
+						font-size: 30px;
+						padding: 0px 0px 12px 0px;
+						margin: 0px 0px 30px 0px; } }
+				@media (max-width: 479.98px) {
+					.disclosure__title { font-size: 23px; } }
+			.disclosure__table {
+				width: 100%;
+				border-collapse: collapse;
+				table-layout: fixed; }
+			.disclosure__table th,
+			.disclosure__table td {
+				border: 1px solid #dedede;
+				padding: 18px 20px;
+				text-align: left;
+				vertical-align: top;
+				font-size: 15px;
+				line-height: 1.75;
+				color: #0B0B0B;
+				word-wrap: break-word;
+				overflow-wrap: break-word; }
+			.disclosure__table th {
+				width: 30%;
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 700;
+				line-height: 1.5;
+				background-color: #0B0B0B;
+				color: #F7F7F7; }
+			.disclosure__table td p { margin: 0px 0px 10px 0px; }
+			.disclosure__table td p:last-child { margin: 0px; }
+			.disclosure__table a { color: #005BC5; text-decoration: underline; }
+			@media (max-width: 991.98px) {
+				.disclosure__table th { width: 34%; }
+				.disclosure__table th,
+				.disclosure__table td { padding: 14px 14px; font-size: 14px; } }
+			@media (max-width: 479.98px) {
+				.disclosure__table,
+				.disclosure__table tbody,
+				.disclosure__table tr,
+				.disclosure__table th,
+				.disclosure__table td { display: block; width: 100%; }
+				.disclosure__table tr { margin: 0px 0px 16px 0px; }
+				.disclosure__table th {
+					border-bottom: 0px;
+					font-size: 14px;
+					padding: 12px 14px; }
+				.disclosure__table td { padding: 14px 14px; } }
+		</style>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -22,16 +105,12 @@
 					<div class="mainblock__row">
 						<div class="mainblock__column left-column">
 							<div class="left-column__content">
-								<a href="" class="left-column__logo"><img src="img/logo.svg" alt=""></a>
-								<div class="left-column__title jp_title">SWU Japan - 私たちの使命</div>
-								<div class="left-column__text jp_lang">
-									<span>私たちについて</span><br>
-									一般社団法人Stand With Ukraine Japan（SWUJ、スタンド・ウィズ・ウクライナ・ジャパン）は、2022年2月のウクライナ侵攻を機に、東京で生まれたムーブメントです。<br><br>
-									侵攻が始まったその日から、東京で暮らし働くウクライナ人（そして様々な国籍の友人たち）が集まり、ウクライナの壊滅的な状況を少しでも和らげるために活動を始めました。<br><br>
-									私たちは異なる背景を持つごく普通の人々です。それぞれの知識と力を結集し、ウクライナが主権を守り、独立国として繁栄することを支援したいと考えています。
-                </div>
+								<a href="index.html" class="left-column__logo"><img src="img/logo.svg" alt=""></a>
+								<div class="left-column__title">SWU Japan</div>
+								<div class="left-column__text">
+									Stand With Ukraine Japan is a non-profit organization. The information below is disclosed in accordance with the Act on Specified Commercial Transactions (特定商取引法).
+								</div>
 							</div>
-							<div class="left-column__image ibg"><img src="img/header.jpg" alt=""></div>
 						</div>
 						<div class="mainblock__column right-column">
 							<div class="right-column__content">
@@ -61,8 +140,8 @@
 								</div>
 								<div class="right-column__donate doanate">
 									<div class="doanate__lang lang">
-										<a href="index.html" class="lang__link">EN</a>
-										<a href="index-jp.html" class="lang__link lang__link_active">jp</a>
+										<a href="commerce-disclosure.html" class="lang__link lang__link_active">EN</a>
+										<a href="commerce-disclosure-jp.html" class="lang__link">jp</a>
 									</div>
 									<div class="doanate__gerb gerb">
 										<div class="gerb__image">
@@ -79,96 +158,82 @@
 						</div>
 					</div>
 				</div>
-				<div class="objective">
+								<div class="disclosure">
 					<div class="container">
-						<div class="objective__content">
-							<div class="objective__title jp_title">私たちの目的と願い</div>
-							<div class="objective__row">
-								<div class="objective__column">
-									<div class="objective__text jp_lang">私たちは、ウクライナにおいても、そして世界の他の地域においても、平和以外に何も望んでいません。SWUの中心にはウクライナ国籍の人々がおり、私たち自身が、侵攻によって影響を受けたウクライナの家族や友人と個人的なつながりを持っています。私たちの目的は、主権を守らなければならないウクライナの人道危機を緩和するために、できる限りのことをすることです。また、ウクライナの文化と芸術の美しさと奥深さを広く伝えていきたいと考えています。</div>
-								</div>
-								<div class="objective__column column-img">
-									<div class="objective__image ibg">
-										<img src="img/objective.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
+						<h1 class="disclosure__title">Commercial Disclosure</h1>
+						<table class="disclosure__table">
+							<tbody>
+								<tr>
+									<th>Organization name</th>
+									<td>一般社団法人Stand With Ukraine Japan</td>
+								</tr>
+								<tr>
+									<th>Corporate number</th>
+									<td>9011005009694</td>
+								</tr>
+								<tr>
+									<th>Board of directors</th>
+									<td><p>Head Representative director: Nagashima Monica</p><p>Director: Kaverina Oleksandra</p><p>Director: Kotenko Nataliia</p></td>
+								</tr>
+								<tr>
+									<th>Address</th>
+									<td>Tokyo-to, Meguro-ku, Meguro 2-11-3</td>
+								</tr>
+								<tr>
+									<th>Phone number</th>
+									<td>We will disclose without delay if requested.</td>
+								</tr>
+								<tr>
+									<th>Email</th>
+									<td><a href="mailto:standwithukrainejp@gmail.com">standwithukrainejp@gmail.com</a></td>
+								</tr>
+								<tr>
+									<th>Additional fees</th>
+									<td>Bank transfer fees, if you choose to donate by bank transfer, are borne by the donor. No other fees apply.</td>
+								</tr>
+								<tr>
+									<th>Payment options</th>
+									<td>Credit card, bank transfer</td>
+								</tr>
+								<tr>
+									<th>Payment timing</th>
+									<td>At the donor&rsquo;s discretion</td>
+								</tr>
+								<tr>
+									<th>Product delivery time</th>
+									<td>Not applicable</td>
+								</tr>
+								<tr>
+									<th>Exchanges and returns policy</th>
+									<td><p>Donations and annual membership fees cannot be refunded once payment has been completed.</p><p>&lt;Before completion of payment&gt;: You can cancel by pressing the cancel button on the website.</p><p>For any other refund questions, email (<a href="mailto:standwithukrainejp@gmail.com">standwithukrainejp@gmail.com</a>).</p></td>
+								</tr>
+								<tr>
+									<th>Price</th>
+									<td>the amount shown on each page</td>
+								</tr>
+								<tr>
+									<th>Other</th>
+									<td>If you donate as a Monthly Supporter, the amount you selected at registration will be charged to your credit card every month until you cancel your registration.</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<div class="do">
-					<div class="container">
-						<div class="do__content">
-							<div class="do__title title-do">
-								<div class="title-do__title jp_title">活動内容</div>
-								<div class="title-do__subtitle jp_title">資金援助でウクライナ各地域のニーズや課題にに向き合いながら地域の人々の安全と生活の向上に貢献しています</div>
-							</div>
-							<div class="do__row">
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="card__text jp_lang"><span>寄付は何に使うの？</span><br>食料、医療品、物資の購入／配送や避難シェルターの設定など</div>
-									</div>
-								</div>
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="card__text jp_lang"><span>いくら？</span><br>2022年から2025年8月現在まで22,550,000円の寄付を送金</div>
-									</div>
-								</div>
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="card__text jp_lang"><span>誰に？</span><br>ウクライナの 75 のボランティア組織および慈善基金。例として、NPO Keisers、慈善基金「Caritas」、「Hospitaliery」、NPO Tiko 基金、Kran、「Pivdenna Palyanitsa」基金、Kordon-UA、NGO「Desna Help」などが挙げられます。</div>
-									</div>
-								</div>								
-							</div>
-							<div class="do__title title-do"></div>
-							<div class="do__title title-do">
-								<div class="title-do__title jp_title">ボランティア活動</div>
-								<div class="title-do__subtitle jp_title"><span class="bullet">・私たちのボランティアはウクライナの 25 地域のうち 19 地域で活動しており、合計 200 人を超えるボランティアが物理的に、デジタル的に私たちをサポートしています。</span><span class="bullet">・日本での活動は関東拠点がメインですが、各地域に活動広げるための協力される政府や団体を募集しています。</span></div>
-							</div>
-							<div class="do__row">
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="relative"><div class="card__image ibg"><img src="img/do/one.jpg" alt=""></div></div>
-										<div class="card__text jp_lang"><span>毎週の平和的なデモ</span><br>新宿駅前</div>
-									</div>
-								</div>
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="relative"><div class="card__image ibg"><img src="img/do/two.jpg" alt=""></div></div>
-										<div class="card__text jp_lang"><span>チャリティーイベント</span><br>テーマパーティー、チャリティーディナー、ワークショップ、コンサート、講演会、フェスティバルなど、ウクライナ文化の共有や募金活動。</div>
-									</div>
-								</div>
-								<div class="do__column">
-									<div class="do__card card">
-										<div class="relative"><div class="card__image ibg"><img src="img/do/three.jpg" alt=""></div></div>
-										<div class="card__text jp_lang"><span>影響を受けたウクライナ人のサポート</span><br>全面的な侵攻の影響を受けたウクライナの芸術家、職人、製造業者、事業主への支援。</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slogan">
-					<div class="container">
-						<div class="slogan__text jp_title">私たちは、私たちの使命に貢献するのを待っている人なら誰でもいつでも開いています。 私たちは、ウクライナがこれらの試練の時代を乗り越え、その後独立国家として再建するのを支援することを決意しています。</div>
-					</div>
-					<div class="slogan__image ibg"><img src="img/footer.jpg" alt=""></div>
-				</div>
-				<div class="footer">
+<div class="footer">
 					<div class="container">
 						<div class="footer__body">
-							<div class="footer__text jp_title">
-								<p>私たちはウクライナと共に立ち上がる。</p>
-								<p><span>私たちはSWU Japanです。</span></p>
+							<div class="footer__text">
+								<p>We Stand With Ukraine.</p>
+								<p><span>We are SWU Japan.</span></p>
 							</div>
 							<div class="footer__logo">
-								<a href="" class=""><img src="img/logo.svg" alt=""></a>
+								<a href="index.html" class=""><img src="img/logo.svg" alt=""></a>
 							</div>
 							<div class="footer__link">
 								<a href="docs/Financial_Result_2024.pdf" target="_blank">貸借対照表 令和6年度</a><br>
 								<a href="docs/Financial_Result_2025.pdf" target="_blank">貸借対照表 令和７年度</a><br>
-								<a href="commerce-disclosure-jp.html">特定商取引法に基づく表記</a><br>
-								<a href="privacy-jp.html">プライバシーポリシー</a><br>
+								<a href="commerce-disclosure.html">Commercial Disclosure</a><br>
+								<a href="privacy.html">Privacy Policy</a><br>
 							</div>
 						</div>
 					</div>
