@@ -9,6 +9,52 @@
 		<!-- <meta name="robots" content="noindex, nofollow"> -->
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* --- a few donation reports on the home page --- */
+		.rep img {
+			display: block;
+			width: 100%;
+			height: 380px;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: top center;
+			object-position: top center; }
+		.rep figcaption {
+			font-size: 14px;
+			line-height: 22px;
+			color: #bdbdbd;
+			margin: 14px 0px 0px 0px; }
+		.rep__more {
+			margin: 34px 0px 34px 0px;
+			font-size: 16px;
+			text-align: right; }
+			.rep__more a { color: #FCD600; text-decoration: underline; }
+		/* --- closing call to action --- */
+		.rep__cta {
+			margin: 0px 0px 70px 0px;
+			padding: 36px 30px 40px 30px;
+			border: 1px solid #3a3a3a;
+			text-align: center; }
+			.rep__cta-title {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 1.3;
+				color: #F7F7F7;
+				margin: 0px 0px 14px 0px; }
+			.rep__cta-text {
+				font-size: 16px;
+				line-height: 26px;
+				color: #bdbdbd;
+				max-width: 720px;
+				margin: 0px auto 26px auto; }
+		@media (max-width: 767.98px) {
+			.rep img { height: 300px; }
+			.rep__more { text-align: left; margin: 30px 0px 30px 0px; }
+			.rep__cta { margin: 0px 0px 50px 0px; padding: 28px 20px 30px 20px; }
+			.rep__cta-title { font-size: 24px; } }
+	</style>
+
 	</head>
 	<body>
 		<div class="wrapper">
@@ -73,7 +119,7 @@
 											</picture>
 										</div>
 									</div>
-									<a href="https://linktr.ee/swujapan" target="_blank" class="doanate__button btn">DONATE</a>
+									<a href="donate-jp.html" class="doanate__button btn">DONATE</a>
 								</div>
 							</div>
 						</div>
@@ -120,7 +166,7 @@
 									</div>
 								</div>								
 							</div>
-							<div class="do__title title-do"></div>
+				<div class="do__title title-do"></div>
 							<div class="do__title title-do">
 								<div class="title-do__title jp_title">ボランティア活動</div>
 								<div class="title-do__subtitle jp_title"><span class="bullet">・私たちのボランティアはウクライナの 25 地域のうち 19 地域で活動しており、合計 200 人を超えるボランティアが物理的に、デジタル的に私たちをサポートしています。</span><span class="bullet">・日本での活動は関東拠点がメインですが、各地域に活動広げるための協力される政府や団体を募集しています。</span></div>
@@ -144,6 +190,37 @@
 										<div class="card__text jp_lang"><span>影響を受けたウクライナ人のサポート</span><br>全面的な侵攻の影響を受けたウクライナの芸術家、職人、製造業者、事業主への支援。</div>
 									</div>
 								</div>
+							</div>
+							<div class="do__title title-do"></div>
+							<div class="do__title title-do">
+								<div class="title-do__title jp_title">寄付の使われ方</div>
+								<div class="title-do__subtitle jp_title"><span class="bullet">・支援のたびに公開している報告レポートから、いくつかご紹介します。写真をタップすると全文が見られます。</span></div>
+							</div>
+							<div class="do__row">
+								<div class="do__column">
+									<figure class="rep jp_lang">
+										<img src="img/reports/shelter-gifts.jpg" alt="ミスト・ドブラ保護施設の子どもたちへプレゼントが届きました。" width="900" height="1362" loading="lazy">
+										<figcaption>ミスト・ドブラ保護施設の子どもたちへプレゼントが届きました。</figcaption>
+									</figure>
+								</div>
+								<div class="do__column">
+									<figure class="rep jp_lang">
+										<img src="img/reports/kurakhove-residents.jpg" alt="最前線の都市クラホヴェの住民の方々へ食料をお届けしました。" width="900" height="1423" loading="lazy">
+										<figcaption>最前線の都市クラホヴェの住民の方々へ食料をお届けしました。</figcaption>
+									</figure>
+								</div>
+								<div class="do__column">
+									<figure class="rep jp_lang">
+										<img src="img/reports/eye-clinic.jpg" alt="56名の方が眼鏡を受け取り、66名の患者さんが診察を受けました。" width="900" height="1423" loading="lazy">
+										<figcaption>56名の方が眼鏡を受け取り、66名の患者さんが診察を受けました。</figcaption>
+									</figure>
+								</div>
+							</div>
+							<p class="rep__more"><a href="donate-jp.html">報告レポートをもっと見る &rarr;</a></p>
+							<div class="rep__cta">
+								<div class="rep__cta-title jp_title">ご支援のお願い</div>
+								<div class="rep__cta-text jp_lang">ウクライナの人道支援のための資金を集め、現地の信頼できる団体のボランティアへ届けています。</div>
+								<a href="donate-jp.html" class="btn">DONATE</a>
 							</div>
 						</div>
 					</div>
@@ -174,12 +251,6 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer">
-	<div class='container'>
-		<div class="footer__row">
-		</div>
-	</div>
-</footer>
 		</div>
 		<div class="popup">
 	<div class="popup-table table">

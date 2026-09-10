@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Donate | SWU Japan</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			/* this page only: let the header block size to its content so the
+			   ways to give are visible without scrolling past a full-screen hero */
+			.page {
+				position: relative;
+				height: auto;
+				min-height: 100%; }
+			.mainblock {
+				flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				-webkit-box-flex: 0; }
+			.giving {
+				background-color: #F7F7F7;
+				padding: 100px 0px; }
+				@media (max-width: 991.98px) {
+					.giving { padding: 60px 0px; } }
+			.giving__title {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 900;
+				font-size: 40px;
+				line-height: 1.3;
+				color: #0B0B0B;
+				position: relative;
+				padding: 0px 0px 20px 0px;
+				margin: 0px 0px 40px 0px; }
+				.giving__title:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #FCD600; }
+				@media (max-width: 991.98px) {
+					.giving__title { font-size: 30px; padding: 0px 0px 12px 0px; margin: 0px 0px 30px 0px; } }
+				@media (max-width: 479.98px) {
+					.giving__title { font-size: 23px; } }
+			.giving__lead p {
+				font-size: 17px;
+				line-height: 30px;
+				color: #0B0B0B;
+				margin: 0px 0px 20px 0px; }
+			.giving__subtitle {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 900;
+				font-size: 30px;
+				line-height: 1.3;
+				color: #0B0B0B;
+				margin: 60px 0px 0px 0px;
+				padding: 0px 0px 16px 0px;
+				position: relative; }
+				.giving__subtitle:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #FCD600; }
+				@media (max-width: 991.98px) {
+					.giving__subtitle { font-size: 24px; margin: 44px 0px 0px 0px; } }
+			.giving__method {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 800;
+				font-size: 22px;
+				line-height: 1.4;
+				color: #0B0B0B;
+				margin: 44px 0px 10px 0px; }
+				@media (max-width: 991.98px) {
+					.giving__method { font-size: 19px; margin: 34px 0px 8px 0px; } }
+			.giving__text {
+				font-size: 17px;
+				line-height: 30px;
+				color: #0B0B0B;
+				margin: 0px 0px 16px 0px; }
+				.giving__text a { color: #005BC5; text-decoration: underline; }
+			.giving__label {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 700;
+				font-size: 15px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #0B0B0B;
+				margin: 24px 0px 0px 0px; }
+			.giving__tiers {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin: 12px -8px 0px -8px; }
+			.giving__tier {
+				display: block;
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 140px;
+				flex: 1 1 140px;
+				margin: 8px;
+				padding: 18px 20px;
+				border: 2px solid #0B0B0B;
+				background-color: #0B0B0B;
+				color: #FCD600;
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 1.2;
+				text-align: center;
+				text-decoration: none; }
+				.giving__tier span {
+					display: block;
+					font-size: 11px;
+					font-weight: 600;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					color: #F7F7F7;
+					margin: 6px 0px 0px 0px; }
+				.giving__tier:hover {
+					background-color: #005BC5;
+					border-color: #005BC5; }
+				/* on a phone, two amounts per row rather than three plus a stray.
+				   must come after the base .giving__tier rule above: a media query
+				   adds no specificity, so source order is what decides. */
+				@media (max-width: 767.98px) {
+					.giving__tiers { margin: 12px -6px 0px -6px; }
+					.giving__tier {
+						-ms-flex: 1 1 40%;
+						flex: 1 1 40%;
+						margin: 6px;
+						padding: 16px 12px;
+						font-size: 21px; } }
+			.giving__note {
+				font-size: 14px;
+				line-height: 24px;
+				color: #595959;
+				margin: 12px 0px 0px 0px; }
+				.giving__note a { color: #005BC5; text-decoration: underline; }
+			.giving__table {
+				width: 100%;
+				border-collapse: collapse;
+				table-layout: fixed;
+				margin: 16px 0px 0px 0px; }
+			.giving__table th,
+			.giving__table td {
+				border: 1px solid #dedede;
+				padding: 18px 20px;
+				text-align: left;
+				vertical-align: top;
+				font-size: 15px;
+				line-height: 1.75;
+				color: #0B0B0B;
+				word-wrap: break-word;
+				overflow-wrap: break-word; }
+			.giving__table th {
+				width: 34%;
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 700;
+				line-height: 1.5;
+				background-color: #0B0B0B;
+				color: #F7F7F7; }
+			.giving__table a { color: #005BC5; text-decoration: underline; }
+			.giving__tbc {
+				color: #8a6d00;
+				background-color: #FFF3C4;
+				padding: 1px 6px; }
+			@media (max-width: 991.98px) {
+				.giving__table th { width: 40%; }
+				.giving__table th,
+				.giving__table td { padding: 14px 14px; font-size: 14px; } }
+			@media (max-width: 479.98px) {
+				.giving__table,
+				.giving__table tbody,
+				.giving__table tr,
+				.giving__table th,
+				.giving__table td { display: block; width: 100%; }
+				.giving__table tr { margin: 0px 0px 16px 0px; }
+				.giving__table th {
+					border-bottom: 0px;
+					font-size: 14px;
+					padding: 12px 14px; }
+				.giving__table td { padding: 14px 14px; } }
+			/* --- how much has been sent, at a glance --- */
+			.giving__hero { margin: 0px 0px 36px 0px; }
+				.giving__hero img {
+					display: block;
+					width: 100%;
+					height: auto; }
+			.giving__figures {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin: 28px -10px 0px -10px; }
+			.giving__figure {
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 40%;
+				flex: 1 1 40%;
+				margin: 10px;
+				padding: 24px 22px 26px 22px;
+				background-color: #ffffff;
+				border-top: 3px solid #FCD600; }
+				.giving__figure b {
+					display: block;
+					font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+					font-weight: 900;
+					font-size: 30px;
+					line-height: 1.15;
+					color: #0B0B0B; }
+				.giving__figure span {
+					display: block;
+					font-size: 14px;
+					line-height: 22px;
+					color: #595959;
+					margin: 10px 0px 0px 0px; }
+				@media (max-width: 767.98px) {
+					.giving__figure {
+						-ms-flex: 1 1 100%;
+						flex: 1 1 100%;
+						padding: 20px 18px 22px 18px; }
+					.giving__figure b { font-size: 26px; } }
+			/* --- photos --- */
+			.giving__gallery {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				margin: 24px -10px 34px -10px; }
+			.giving__shot {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 1 auto;
+				flex: 0 1 auto;
+				width: calc(33.333% - 20px);
+				margin: 10px; }
+				.giving__shot img {
+					display: block;
+					width: 100%;
+					height: auto; }
+				.giving__shot figcaption {
+					font-size: 14px;
+					line-height: 22px;
+					color: #595959;
+					margin: 10px 0px 0px 0px; }
+				@media (max-width: 991.98px) {
+					.giving__shot {
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
+						width: calc(50% - 20px); } }
+				@media (max-width: 767.98px) {
+					.giving__shot {
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
+						width: 100%; } }
+			.giving__report {
+				margin: 20px 0px 0px 0px;
+				max-width: 320px; }
+				.giving__report img {
+					display: block;
+					width: 100%;
+					height: auto;
+					border: 1px solid #dedede; }
+				.giving__report figcaption {
+					font-size: 14px;
+					line-height: 22px;
+					color: #595959;
+					margin: 12px 0px 0px 0px; }
+
+			/* --- closing call to action --- */
+			.giving__cta {
+				margin: 44px 0px 0px 0px;
+				padding: 34px 38px;
+				background-color: #0B0B0B;
+				border-left: 6px solid #FCD600; }
+				.giving__cta-title {
+					font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+					font-weight: 700;
+					font-size: 26px;
+					line-height: 1.3;
+					color: #F7F7F7;
+					margin: 0px 0px 12px 0px; }
+				.giving__cta-text {
+					font-size: 16px;
+					line-height: 1.7;
+					color: #bdbdbd;
+					margin: 0px 0px 18px 0px; }
+				.giving__cta-bank {
+					font-size: 17px;
+					line-height: 1.7;
+					color: #F7F7F7;
+					margin: 0px; }
+					.giving__cta-bank b { color: #FCD600; }
+				.giving__cta-holder {
+					font-size: 15px;
+					line-height: 1.7;
+					color: #9a9a9a;
+					margin: 6px 0px 0px 0px; }
+				@media (max-width: 767.98px) {
+					.giving__cta { margin: 36px 0px 0px 0px; padding: 26px 22px; }
+					.giving__cta-title { font-size: 22px; }
+					.giving__cta-bank { font-size: 15px; } }
+			/* --- gallery of real donation reports --- */
+			.giving__reports {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin: 20px -8px 0px -8px; }
+			.giving__rep {
+				-webkit-box-flex: 1;
+				-ms-flex: 0 1 auto;
+				flex: 0 1 auto;
+				width: calc(25% - 16px);
+				margin: 8px;
+				min-width: 0; }
+				.giving__rep a { display: block; }
+				.giving__rep img {
+					display: block;
+					width: 100%;
+					height: 250px;
+					-o-object-fit: cover;
+					object-fit: cover;
+					-o-object-position: top center;
+					object-position: top center;
+					border: 1px solid #dedede;
+					background-color: #f2f2f2; }
+				.giving__rep figcaption {
+					font-size: 13px;
+					line-height: 19px;
+					color: #595959;
+					margin: 8px 0px 0px 0px; }
+				@media (max-width: 991.98px) {
+					.giving__rep {
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
+						width: calc(33.333% - 16px); } }
+				@media (max-width: 767.98px) {
+					.giving__rep {
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
+						width: calc(50% - 16px); }
+					.giving__rep img { height: 200px; }
+					.giving__rep figcaption { font-size: 12px; line-height: 17px; } }
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="page">
+				<div class="mainblock">
+					<div class="mainblock__row">
+						<div class="mainblock__column left-column">
+							<div class="left-column__content">
+								<a href="index.html" class="left-column__logo"><img src="img/logo.svg" alt=""></a>
+								<div class="left-column__title">SWU Japan</div>
+								<div class="left-column__text">
+									Every donation is used to buy food, medicines, medical equipment, generators and fuel, and is delivered to people in Ukraine through volunteers and NGOs working on the ground.
+								</div>
+							</div>
+						</div>
+						<div class="mainblock__column right-column">
+							<div class="right-column__content">
+								<div class="right-column__icon icon">
+                  <div class="line_up up">
+										<a href="https://www.instagram.com/swujapan/" target="_blank" class="icon__insta"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.65" height="37.65" viewBox="0 0 37.65 37.65"><defs><style>.ai{fill:none;}.bi{clip-path:url(#a);}.ci{fill:#f7f7f7;}</style><clipPath id="a"><rect class="ai" width="37.65" height="37.65" transform="translate(0 0)"/></clipPath></defs><g transform="translate(0 0)"><g class="bi"><path class="ci" d="M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-10.7,3.3h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0-.08-17.79M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M37.56,7.33a1.553,1.553,0,0,0-.04-.37,8.715,8.715,0,0,0-1.29-3.02A9.06,9.06,0,0,0,32.06.55,8.224,8.224,0,0,0,29.61,0L8.05.01a4.947,4.947,0,0,1-.72.08,2.733,2.733,0,0,0-.49.06A8.767,8.767,0,0,0,2.4,2.74,8.248,8.248,0,0,0,0,8.51q0,10.3.01,20.61a7.306,7.306,0,0,0,.14,1.56,8.746,8.746,0,0,0,2.62,4.56,8.175,8.175,0,0,0,5.76,2.41H29.14a7.686,7.686,0,0,0,1.6-.16,8.651,8.651,0,0,0,2.99-1.29,9.038,9.038,0,0,0,3.39-4.19,8.555,8.555,0,0,0,.53-2.3V8.03a3.947,3.947,0,0,1-.09-.7M36.34,28.65a7.634,7.634,0,0,1-5.15,7.26,8,8,0,0,1-2.61.4H21.87c-1.48.01-2.95.01-4.43.01-2.78,0-5.56-.01-8.34-.01a7.4,7.4,0,0,1-7.09-4.49,7.26,7.26,0,0,1-.67-3.23V26.53c.01-5.84.02-11.68,0-17.52a7.658,7.658,0,0,1,5.15-7.3h.02a8.294,8.294,0,0,1,2.66-.4h9.67c3.24.01,6.47.01,9.71,0a7.436,7.436,0,0,1,6.39,3.22,7.368,7.368,0,0,1,1.4,4.46q-.015,9.81,0,19.66M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-10.7,3.3h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0-.08-17.79M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19m6.25-13.94a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19M29.55,6.61a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m0,0a1.48,1.48,0,0,0-1.44,1.47,1.455,1.455,0,0,0,1.45,1.47h.01a1.521,1.521,0,0,0,1.48-1.47,1.505,1.505,0,0,0-1.5-1.47m-4.46,5.85a8.839,8.839,0,0,0-6.24-2.55h-.07a8.9,8.9,0,0,0,.04,17.79h.11a8.9,8.9,0,0,0,6.16-15.24M18.84,26.4h-.03a7.6,7.6,0,0,1,.02-15.19h.01a7.6,7.6,0,0,1,0,15.19"/></g></g></svg>Instagram</a>
+									</div>
+                  <a href="https://www.facebook.com/swujapan" target="_blank" class="icon__facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.032" height="33.415" viewBox="0 0 39.032 33.415">
+                    <defs>
+                      <style>
+                        .af{fill:none;}
+                        .bf{clip-path:url(#a);}
+                        .cf{fill:#f7f7f7;stroke:#000;stroke-width:1;}
+                      </style>
+                      <clipPath id="a">
+                        <rect class="af" width="39.032" height="33.415" transform="translate(0 0)"/>
+                      </clipPath>
+                    </defs>
+                    <g class="bf">
+                      <path class="cf" d="M24.1,2.1H15.4c-3.6,0-6.2,2.7-6.2,6.4v6.3H6.3v7.3h2.9v14.5h7.4V22.1h5.5l1.1-7.3h-6.7v-4.3c0-1.9,1-2.9,3.1-2.9H25V2.2C24.6,2.1,24.3,2.1,24.1,2.1Z"/>
+                    </g>
+                  </svg>Facebook</a>
+                  <div class="line_up down">
+                    <a href="https://x.com/swujapan" target="_blank" class="icon__twitter"><svg class="twitter" xmlns="http://www.w3.org/2000/svg" width="38.453" height="31.872" viewBox="0 0 38.453 31.872"><defs><style>.at{fill:#f7f7f7;}</style></defs><path class="at" d="M-1451.719,702.066a4.049,4.049,0,0,1-1.221.465c-.018.009-.046.009-.073.018a.242.242,0,0,0,.046-.055,6.29,6.29,0,0,0,.756-.975,3.665,3.665,0,0,0,.683-1.914.707.707,0,0,0-1.048-.656,1.27,1.27,0,0,0-.255.155,7.909,7.909,0,0,1-3.718,1.367,1,1,0,0,1-.8-.264,7.808,7.808,0,0,0-6.934-1.786,8.234,8.234,0,0,0-6.5,8.219c0,.346.036.693.055,1.039a14.585,14.585,0,0,1-4.31-.747,22.642,22.642,0,0,1-6.816-3.936,28.053,28.053,0,0,1-3.016-2.87.734.734,0,0,0-1.276.064,8.514,8.514,0,0,0-1.021,2.807,8.092,8.092,0,0,0,.829,5.012c.228.456.492.884.738,1.33a3.043,3.043,0,0,1-.419-.219.739.739,0,0,0-1.194.693c0,.328.018.647.046.975a7.773,7.773,0,0,0,2.989,5.622c.1.082.246.128.282.283-.538.109-.82.474-.674.929a7.748,7.748,0,0,0,3.663,4.693,9.175,9.175,0,0,0,2.087.838c-.027.118-.109.137-.164.182a10.715,10.715,0,0,1-5.422,1.877,17.159,17.159,0,0,1-3.554-.064.7.7,0,0,0-.875.465.748.748,0,0,0,.355.9,16.737,16.737,0,0,0,3.2,1.859,20.8,20.8,0,0,0,6.706,1.64,23.285,23.285,0,0,0,6.315-.292,23.85,23.85,0,0,0,5.859-2.014,20.24,20.24,0,0,0,6.962-5.422,23.038,23.038,0,0,0,5.094-13.75,2.573,2.573,0,0,1,1.039-2.26l.055-.055a14.181,14.181,0,0,0,2.825-3.472v-.374C-1450.789,701.775-1451.108,701.693-1451.719,702.066Zm-4.018,5.076a22.216,22.216,0,0,1-2.05,9.932,18.821,18.821,0,0,1-7.891,8.629,23.191,23.191,0,0,1-6.615,2.542,20.939,20.939,0,0,1-5.8.319,19.368,19.368,0,0,1-5.914-1.248,8.508,8.508,0,0,1-1.13-.538c.583-.064,1.157-.128,1.731-.21a11.077,11.077,0,0,0,6.688-3.3.754.754,0,0,0,.191-.984.837.837,0,0,0-.738-.355,6.471,6.471,0,0,1-4.21-1.832,5.848,5.848,0,0,1-1.257-1.786,10.259,10.259,0,0,0,1.312-.073,5.946,5.946,0,0,0,.693-.182c.456-.155.647-.383.647-.765s-.21-.583-.683-.72a7.314,7.314,0,0,1-2.5-1.248,6.146,6.146,0,0,1-2.333-3.855c-.027-.146-.073-.282-.109-.437.137-.082.255.027.374.073a4.135,4.135,0,0,0,1.731.264.754.754,0,0,0,.756-.492.782.782,0,0,0-.273-.875,8.807,8.807,0,0,1-2.469-4,6.354,6.354,0,0,1,.255-4.164,3.432,3.432,0,0,1,.656.6,26.343,26.343,0,0,0,6.825,4.911,16.348,16.348,0,0,0,7.727,1.786c.848-.018,1.112-.328.948-1.148a7.457,7.457,0,0,1-.128-2.16,6.778,6.778,0,0,1,6.679-6.133,6.418,6.418,0,0,1,4.52,1.8,1.479,1.479,0,0,0,1.212.456,9.1,9.1,0,0,0,2.46-.456c.164-.055.328-.1.556-.173a11.241,11.241,0,0,1-1.631,1.6,1.706,1.706,0,0,0-.428.419.711.711,0,0,0,.647,1.075,9.853,9.853,0,0,0,1.558-.2.8.8,0,0,1,.419-.009c-.355.355-.674.693-1.011,1.02s-.683.665-1.039.984A1.118,1.118,0,0,0-1455.737,707.142Z" transform="translate(1488.878 -698.232)"/></svg>Twitter</a>
+                  </div>
+								</div>
+								<div class="right-column__donate doanate">
+									<div class="doanate__lang lang">
+										<a href="donate.html" class="lang__link lang__link_active">EN</a>
+										<a href="donate-jp.html" class="lang__link">jp</a>
+									</div>
+									<div class="doanate__gerb gerb">
+										<div class="gerb__image">
+											<picture>
+												<source srcset="img/gerb_mob.png" media="(max-width: 768px)">
+												<source srcset="img/gerb.svg">
+												<img src="img/gerb.svg" alt="Flowers">
+											</picture>
+										</div>
+									</div>
+									<a href="#bank" class="doanate__button btn">DONATE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="giving">
+					<div class="container">
+
+						<h1 class="giving__title">Support Ukraine</h1>
+						<figure class="giving__hero">
+							<img src="img/donate/aid-community.jpg" alt="SWU Japan volunteers with boxes of aid after a delivery" width="1000" height="563">
+						</figure>
+
+						<div class="giving__lead">
+							<p>Stand With Ukraine Japan works in close coordination with the volunteers and NGOs already inside Ukraine, and delivers your donation directly to the people who need it.</p>
+							<p>Donations are used to procure food, medicines, medical equipment, generators and fuel for transport. To make sure our work is transparent, we publish reports every few days showing the total raised, and when, how much, for what purpose and to whom each delivery went.</p>
+							<p>In the areas under Russian occupation especially, more and more families cannot get food. Some cannot evacuate at all, because they have no car or cannot obtain fuel. The volunteers on the ground put their own lives at risk, doing what is possible under the current conditions to deliver essential supplies to people who cannot buy or travel for themselves.</p>
+							<p>So that as much support as possible reaches the children who will inherit the enormous task of rebuilding Ukraine, we would be deeply grateful for your help.</p>
+						</div>
+
+						<h2 class="giving__subtitle" id="bank">Donate by bank transfer</h2>
+
+						<table class="giving__table">
+							<tbody>
+							<tr>
+								<th>Bank</th>
+								<td>Rakuten Bank (楽天銀行)</td>
+							</tr>
+							<tr>
+								<th>Branch number</th>
+								<td>254</td>
+							</tr>
+							<tr>
+								<th>Account type</th>
+								<td>Ordinary (普通)</td>
+							</tr>
+							<tr>
+								<th>Account number</th>
+								<td>7386615</td>
+							</tr>
+							<tr>
+								<th>Account holder</th>
+								<td>一般社団法人Stand With Ukraine Japan / スタンドウィズウクライナジャパン</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<h2 class="giving__subtitle">Where your donation goes</h2>
+
+						<div class="giving__figures">
+							<div class="giving__figure"><b>&yen;22,550,000</b><span>sent to Ukraine since 2022, as of September 2025</span></div>
+							<div class="giving__figure"><b>75</b><span>volunteer organizations and charitable foundations in Ukraine receiving our funds</span></div>
+							<div class="giving__figure"><b>19 / 25</b><span>regions of Ukraine where our volunteers work</span></div>
+							<div class="giving__figure"><b>200+</b><span>volunteers helping us physically and virtually</span></div>
+						</div>
+
+
+						<h2 class="giving__subtitle">Who receives the funds</h2>
+
+						<p class="giving__text">Your donation is delivered to 75 volunteer organizations and charitable foundations in Ukraine, including NGO Casers, Hospitallers Medical Battalion, charitable foundations Caritas, Pivdenna Palianytsia, Tiko Fund and Kran, NGO Kordon.UA, NGO Desna and others.</p>
+
+						<h2 class="giving__subtitle">Your donation at work</h2>
+
+						<div class="giving__gallery">
+							<figure class="giving__shot"><img src="img/donate/aid-elderly.jpg" alt="A volunteer handing food parcels to an elderly resident" width="750" height="1000"><figcaption>Delivering food to an elderly resident.</figcaption></figure>
+							<figure class="giving__shot"><img src="img/donate/aid-children.jpg" alt="Children with toys and treats" width="1000" height="666"><figcaption>Toys and treats for children.</figcaption></figure>
+							<figure class="giving__shot"><img src="img/donate/aid-winter.jpg" alt="People receiving supplies outdoors in winter" width="1000" height="563"><figcaption>Supplies handed out in winter.</figcaption></figure>
+							<figure class="giving__shot"><img src="img/donate/aid-unload.jpg" alt="Volunteers unloading aid from a van" width="750" height="1000"><figcaption>Unloading a delivery from the van.</figcaption></figure>
+							<figure class="giving__shot"><img src="img/donate/tokyo-event.jpg" alt="Volunteers at a meeting" width="1000" height="753"><figcaption>Volunteers meeting in person.</figcaption></figure>
+							<figure class="giving__shot">
+								<a href="img/donate/report-handwarmers.jpg" target="_blank" rel="noopener"><img src="img/donate/report-handwarmers.jpg" alt="A SWU Japan donation report: 133,000 yen raised to send hand warmers to Ukraine by sea" width="1000" height="1000"></a>
+								<figcaption>A donation report: &yen;133,000 raised to send hand warmers to Ukraine by sea.</figcaption>
+							</figure>
+						</div>
+
+						<p class="giving__text">We publish a report every few days showing how much was raised and where each delivery went. Here is an example from one of our campaigns.</p>
+
+						<p class="giving__text">More reports from our recent campaigns:</p>
+
+						<div class="giving__reports">
+						<figure class="giving__rep"><a href="img/reports/tourniquets-chest-seals.jpg" target="_blank" rel="noopener"><img src="img/reports/tourniquets-chest-seals.jpg" alt="Tourniquets and chest seals on their way to Ukraine." width="900" height="1423" loading="lazy"></a><figcaption>Tourniquets and chest seals on their way to Ukraine.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/hospitallers-supplies.jpg" target="_blank" rel="noopener"><img src="img/reports/hospitallers-supplies.jpg" alt="Tourniquets and occlusive dressings delivered to Ukraine with the Hospitallers Medical Battalion." width="900" height="1315" loading="lazy"></a><figcaption>Tourniquets and occlusive dressings delivered to Ukraine with the Hospitallers Medical Battalion.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/tourniquets-delivered.jpg" target="_blank" rel="noopener"><img src="img/reports/tourniquets-delivered.jpg" alt="Medical tourniquets bought and sent to their recipients in Ukraine." width="900" height="1423" loading="lazy"></a><figcaption>Medical tourniquets bought and sent to their recipients in Ukraine.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/tourniquets-23.jpg" target="_blank" rel="noopener"><img src="img/reports/tourniquets-23.jpg" alt="23 tourniquets and 23 occlusive dressings, bought for ¥250,000." width="900" height="1423" loading="lazy"></a><figcaption>23 tourniquets and 23 occlusive dressings, bought for &yen;250,000.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/evacuation-vehicles.jpg" target="_blank" rel="noopener"><img src="img/reports/evacuation-vehicles.jpg" alt="Evacuation vehicles repaired for the charity fund Neskorena Ukraina, working in the hot spots." width="900" height="1375" loading="lazy"></a><figcaption>Evacuation vehicles repaired for the charity fund Neskorena Ukraina, working in the hot spots.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/chernobyl-dosimeters.jpg" target="_blank" rel="noopener"><img src="img/reports/chernobyl-dosimeters.jpg" alt="Dosimeters sent to the defenders near Chornobyl, who thanked us for them." width="900" height="1423" loading="lazy"></a><figcaption>Dosimeters sent to the defenders near Chornobyl, who thanked us for them.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/generators-achilles.jpg" target="_blank" rel="noopener"><img src="img/reports/generators-achilles.jpg" alt="Generators for families evacuated from border villages of the Sumy region, with the charity ACHILLES." width="900" height="1423" loading="lazy"></a><figcaption>Generators for families evacuated from border villages of the Sumy region, with the charity ACHILLES.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/generators-temporary-housing.jpg" target="_blank" rel="noopener"><img src="img/reports/generators-temporary-housing.jpg" alt="Generators for displaced families who are still living in temporary housing." width="900" height="1423" loading="lazy"></a><figcaption>Generators for displaced families who are still living in temporary housing.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/avdiivka-aid.jpg" target="_blank" rel="noopener"><img src="img/reports/avdiivka-aid.jpg" alt="Medicines for civilians and soldiers on the Avdiivka front, with our partner Angels of Donbas." width="900" height="1377" loading="lazy"></a><figcaption>Medicines for civilians and soldiers on the Avdiivka front, with our partner Angels of Donbas.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/kurakhove-residents.jpg" target="_blank" rel="noopener"><img src="img/reports/kurakhove-residents.jpg" alt="Food and aid for residents of Kurakhove, a city on the front line." width="900" height="1423" loading="lazy"></a><figcaption>Food and aid for residents of Kurakhove, a city on the front line.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/pokrovsk-village.jpg" target="_blank" rel="noopener"><img src="img/reports/pokrovsk-village.jpg" alt="Supplies delivered to one of the few villages near Pokrovsk our volunteers can still reach." width="900" height="1423" loading="lazy"></a><figcaption>Supplies delivered to one of the few villages near Pokrovsk our volunteers can still reach.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/vision-clinic.jpg" target="_blank" rel="noopener"><img src="img/reports/vision-clinic.jpg" alt="Report on your donations: glasses and gynaecology equipment bought for the clinic." width="900" height="1423" loading="lazy"></a><figcaption>Report on your donations: glasses and gynaecology equipment bought for the clinic.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/eye-clinic.jpg" target="_blank" rel="noopener"><img src="img/reports/eye-clinic.jpg" alt="56 people received glasses, 150 gynaecology kits were handed over and 66 patients were examined." width="900" height="1423" loading="lazy"></a><figcaption>56 people received glasses, 150 gynaecology kits were handed over and 66 patients were examined.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/animal-shelter-medicines.jpg" target="_blank" rel="noopener"><img src="img/reports/animal-shelter-medicines.jpg" alt="Veterinary medicines for the Hostomel animal shelter, and the electricity to keep them refrigerated." width="900" height="1630" loading="lazy"></a><figcaption>Veterinary medicines for the Hostomel animal shelter, and the electricity to keep them refrigerated.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/supplies-and-gifts.jpg" target="_blank" rel="noopener"><img src="img/reports/supplies-and-gifts.jpg" alt="Toys and sweets bought with your donations." width="900" height="985" loading="lazy"></a><figcaption>Toys and sweets bought with your donations.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/shelter-gifts.jpg" target="_blank" rel="noopener"><img src="img/reports/shelter-gifts.jpg" alt="Presents reached the children at the Misto Dobra shelter." width="900" height="1362" loading="lazy"></a><figcaption>Presents reached the children at the Misto Dobra shelter.</figcaption></figure>
+						<figure class="giving__rep"><a href="img/reports/volunteer-report.jpg" target="_blank" rel="noopener"><img src="img/reports/volunteer-report.jpg" alt="Photo report from the volunteer @mononanaa, who we work with." width="900" height="1423" loading="lazy"></a><figcaption>Photo report from the volunteer @mononanaa, who we work with.</figcaption></figure>
+						</div>
+
+						<h2 class="giving__subtitle">Other ways to help</h2>
+
+						<h3 class="giving__method">Leave a message</h3>
+						<p class="giving__text">Have you donated and would you like to leave a message? Please <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6XZO6Co3JEbHzQB1EsJkQ2-3uBRJ0vsn7ItaQ_i19_fYLCQ/viewform" target="_blank">fill in this form</a>.</p>
+
+						<h3 class="giving__method">Volunteer</h3>
+						<p class="giving__text">If you would like to help as a volunteer &mdash; online (interpretation, social media, preparing events) or in person on the day of an event &mdash; please email us at <a href="mailto:standwithukrainejp@gmail.com">standwithukrainejp@gmail.com</a>.</p>
+						<p class="giving__text">In Japan our main activities are around the Kanto region, and we are always looking for cooperation with local organizations throughout Japan.</p>
+
+						<div class="giving__cta">
+							<div class="giving__cta-title">Ready to donate?</div>
+							<p class="giving__cta-text">Bank transfer is how we accept donations. If you would like to help, please transfer to:</p>
+							<p class="giving__cta-bank"><b>Rakuten Bank (楽天銀行)</b> &middot; Branch 254 &middot; Ordinary (普通) &middot; Account 7386615</p>
+							<p class="giving__cta-holder">一般社団法人Stand With Ukraine Japan / スタンドウィズウクライナジャパン</p>
+						</div>
+
+						<p class="giving__note">Payments are handled in accordance with our <a href="commerce-disclosure.html">Commercial Disclosure</a>.</p>
+					</div>
+				</div>
+<div class="footer">
+					<div class="container">
+						<div class="footer__body">
+							<div class="footer__text">
+								<p>We Stand With Ukraine.</p>
+								<p><span>We are SWU Japan.</span></p>
+							</div>
+							<div class="footer__logo">
+								<a href="index.html" class=""><img src="img/logo.svg" alt=""></a>
+							</div>
+							<div class="footer__link">
+								<a href="docs/Financial_Result_2024.pdf" target="_blank">貸借対照表 令和6年度</a>
+								<a href="docs/Financial_Result_2025.pdf" target="_blank">貸借対照表 令和７年度</a>
+								<a href="commerce-disclosure.html">Commercial Disclosure</a>
+								<a href="privacy.html">Privacy Policy</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title"></div>
+				<div class="popup__txt"></div>
+				<form action="#" class="popup-form form">
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					</div>
+					<div class="form-button">
+						<button type="submit" class="form__btn btn fw"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-video">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-close"></div>
+			<div class="popup-video__value video"></div>
+		</div>
+	</div>
+</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js" ></script>
+
+	</body>
+</html>

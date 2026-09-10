@@ -9,6 +9,52 @@
 		<!-- <meta name="robots" content="noindex, nofollow"> -->
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* --- a few donation reports on the home page --- */
+		.rep img {
+			display: block;
+			width: 100%;
+			height: 380px;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: top center;
+			object-position: top center; }
+		.rep figcaption {
+			font-size: 14px;
+			line-height: 22px;
+			color: #bdbdbd;
+			margin: 14px 0px 0px 0px; }
+		.rep__more {
+			margin: 34px 0px 34px 0px;
+			font-size: 16px;
+			text-align: right; }
+			.rep__more a { color: #FCD600; text-decoration: underline; }
+		/* --- closing call to action --- */
+		.rep__cta {
+			margin: 0px 0px 70px 0px;
+			padding: 36px 30px 40px 30px;
+			border: 1px solid #3a3a3a;
+			text-align: center; }
+			.rep__cta-title {
+				font-family: 'Montserrat', 'M PLUS 1p', sans-serif;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 1.3;
+				color: #F7F7F7;
+				margin: 0px 0px 14px 0px; }
+			.rep__cta-text {
+				font-size: 16px;
+				line-height: 26px;
+				color: #bdbdbd;
+				max-width: 720px;
+				margin: 0px auto 26px auto; }
+		@media (max-width: 767.98px) {
+			.rep img { height: 300px; }
+			.rep__more { text-align: left; margin: 30px 0px 30px 0px; }
+			.rep__cta { margin: 0px 0px 50px 0px; padding: 28px 20px 30px 20px; }
+			.rep__cta-title { font-size: 24px; } }
+	</style>
+
 	</head>
 	<body>
 		<div class="wrapper">
@@ -73,7 +119,7 @@
 											</picture>
 										</div>
 									</div>
-									<a href="https://linktr.ee/swujapan" target="_blank" class="doanate__button btn">DONATE</a>
+									<a href="donate.html" class="doanate__button btn">DONATE</a>
 								</div>
 							</div>
 						</div>
@@ -120,7 +166,7 @@
 									</div>
 								</div>								
 							</div>
-							<div class="do__title title-do"></div>
+				<div class="do__title title-do"></div>
 							<div class="do__title title-do">
 								<div class="title-do__title">Volunteer Activity</div>
 								<div class="title-do__subtitle"><span class="bullet">• Our volunteers work in 19 out of 25 regions of Ukraine, and in total more than 200 volunteers help us physically and virtually.</span><span class="bullet">• In Japan, while the main activities are around the Kanto region, we are always looking for cooperation with local organizations throughout Japan.</span></div>
@@ -144,6 +190,37 @@
 										<div class="card__text"><span>Support for Ukrainians</span><br>Supporting Ukrainian artists, craftsmen, manufacturers and business owners affected by the full-scale invasion.</div>
 									</div>
 								</div>
+							</div>
+							<div class="do__title title-do"></div>
+							<div class="do__title title-do">
+								<div class="title-do__title">Your donation at work</div>
+								<div class="title-do__subtitle"><span class="bullet">• A few of the reports we publish after each delivery. Tap any picture to see the full report.</span></div>
+							</div>
+							<div class="do__row">
+								<div class="do__column">
+									<figure class="rep">
+										<img src="img/reports/shelter-gifts.jpg" alt="Presents reached the children at the Misto Dobra shelter." width="900" height="1362" loading="lazy">
+										<figcaption>Presents reached the children at the Misto Dobra shelter.</figcaption>
+									</figure>
+								</div>
+								<div class="do__column">
+									<figure class="rep">
+										<img src="img/reports/kurakhove-residents.jpg" alt="Food and aid for residents of Kurakhove, a city on the front line." width="900" height="1423" loading="lazy">
+										<figcaption>Food and aid for residents of Kurakhove, a city on the front line.</figcaption>
+									</figure>
+								</div>
+								<div class="do__column">
+									<figure class="rep">
+										<img src="img/reports/eye-clinic.jpg" alt="56 people received glasses and 66 patients were examined at the clinic." width="900" height="1423" loading="lazy">
+										<figcaption>56 people received glasses and 66 patients were examined at the clinic.</figcaption>
+									</figure>
+								</div>
+							</div>
+							<p class="rep__more"><a href="donate.html">See more reports &rarr;</a></p>
+							<div class="rep__cta">
+								<div class="rep__cta-title">Support our work</div>
+								<div class="rep__cta-text">Raising funds for humanitarian needs in Ukraine, and delivering them to volunteers of trusted local organizations in Ukraine.</div>
+								<a href="donate.html" class="btn">DONATE</a>
 							</div>
 						</div>
 					</div>
@@ -174,12 +251,6 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer">
-	<div class='container'>
-		<div class="footer__row">
-		</div>
-	</div>
-</footer>
 		</div>
 		<div class="popup">
 	<div class="popup-table table">
